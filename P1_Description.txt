@@ -1,0 +1,28 @@
+
+                            Python Programming
+                               Summer 2022
+                                Project 1
+
+
+turnin code:  py_p1
+
+
+Write a python3.7 program that uses the dart-throwing algorithm to compute pi.
+Count points on the circle as being inside the circle.
+
+I will run the program on system64 this way:
+
+    python3.7 yourpgmname  N
+
+where N is the number of darts to throw.
+
+Your pgm should print one line:
+
+    pi estimate = xxxxx
+
+where you replace xxxxx with the computed estimate of pi.
+
+
+The program will be graded on system64 using the python3.7 command.
+
+Use turnin to submit only your python source file.
