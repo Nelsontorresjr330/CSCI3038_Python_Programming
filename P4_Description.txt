@@ -1,0 +1,81 @@
+
+                        Python Programming
+                            Summer 2022
+                             Project 4
+
+
+turnin code: py_p4
+
+
+Write a python program that uses the multiprocessing module to examine a
+range of integers *inclusive*.  
+
+For each integer, compute the square-root of the square-root of the integer,
+i.e.  sqrt(sqrt(x))
+
+Count the number of resultant values whose fractional part is > 0.93
+     45.79  do NOT count
+    674.96  DO count
+
+A sufficient technique would be to compute the original value mod 1.
+
+The program will be run using 3 command-line arguments like this:
+
+    python3.7 p4.py  2000 30000  1
+    python3.7 p4.py  1000 10000  3
+
+The first and second args are the range of ints to be examined, inclusive.
+The third arg is the number of processes to use to do the computation.
+
+Note that you only count the total number of ints that match the criteria;
+you do not need to keep the matching numbers.
+
+Use the Process facility of the multiprocessing module to create the
+worker processes.  Use the Queue facility of the multiprocessing module
+to retrieve the results from the worker processes.
+
+The mainline program should NOT perform any of the computation.
+Instead, it should merely start the workers, wait for their results, and
+then print the final result.
+
+Use the time.time facility in the mainline to determine the amount of time
+between immediately prior to the worker processes being "start"ed and 
+immediately after they are "join"ed.
+Print the time to 2 decimal places.
+
+The print should contain EXACTLY 1 LINE OF OUTPUT containing these values:
+    the total time
+    the total number of integers matching the criteria
+
+For example, these runs might produce *roughly* these prints on system64:
+
+    python3.7 p4.py 1000 100000 1
+        0.03 6436
+
+    python3.7 p4.py 1000 1000000 1
+        0.20 68506
+
+    python3.7 p4.py 1000 11000000 1
+        2.24 763128
+
+    python3.7 p4.py 1000 11000000 2
+        1.08 763128
+
+    python3.7 p4.py 1000 11000000 3
+        0.75 763128
+
+    python3.7 p4.py 1000 11000000 4
+        0.57 763128
+
+So, speedup would be near-linear for large enough problems.
+
+
+BE SURE TO HAVE THIS AS THE FIRST EXECUTABLE CODE IN YOUR PROGRAM:
+
+    import signal
+    signal.alarm(120)
+
+
+Use turnin to submit only your python source file.
+
+The program will be graded on system64 using the python3.7 command.
