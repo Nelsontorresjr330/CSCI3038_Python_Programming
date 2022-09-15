@@ -9,7 +9,7 @@ https://www.mtsu.edu/csc/undergrad_course_desc.php
 ## Projects 
 • Project 1 - Calculating Pi using dart tosses
 
-• Prohect 2 - Using a Python Program to read robot commands
+• Project 2 - Using a Python Program to read robot commands
 
 • Project 3 - Program utilizing Generators in Python
 
