@@ -1,0 +1,26 @@
+
+
+                                Python Programming
+                                    Summer 2022
+                                     Project 3
+        
+
+turnin code: py_p3
+
+Write a python program that uses the python *generator* facility to
+provide a series of prime numbers between the 1st and 2nd cmd-line args.
+You should name the generator 'primes' and invoke it from your mainline
+pgm like this:
+
+    for prime in primes(int(sys.argv[1]),int(sys.argv[2])):
+        print(prime)
+
+There is a sample C pgm for checking prime-ness in:
+    ~rbutler/public/courses/EXAMPLE.MAKE/prime.c
+
+I will run your pgm as follows, with various values replacing the integer
+arguments, e.g.:
+
+    python3.7 ./script_name  99 1111
+
+All you need to turnin is the python script.
