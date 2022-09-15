@@ -1,0 +1,41 @@
+
+                        Python Programming
+                            Summer 2022
+                             Project 5
+
+
+turnin code: py_p5
+
+
+Write a python3 program to perform these actions:
+    1.  use int(sys.argv[1]) as the arg to random.seed()
+    2.  use int(sys.argv[2]) as the number of 3D points
+    3.  generate a list of the random 3D points (after setting seed)
+    4.  via cffi, invoke:
+            double *compute_distances(int numpts, struct point *points)
+        compiled from p5compdists.c into libp5.so
+    5.  print the minimum distance using
+        format .12f to get up to 12 digits after the decimal
+
+You may assume that libp5.so can be loaded as: ./libp5.so
+In other words, a copy of libp5.so will be in the dir where your
+program is run.
+
+Sample run:
+
+    python3 p5.py 11 7000
+
+and sample output:
+
+    0.001152797993
+
+That run would probably take about 5 seconds on system64,
+whereas p5pure.py (pure python) takes around 20 seconds.
+
+cffi docs:
+    https://cffi.readthedocs.io/en/latest/
+    https://cffi.readthedocs.io/en/latest/using.html
+
+Use turnin to submit only your python source file.
+
+The program will be graded on system64 using the python3 command.
